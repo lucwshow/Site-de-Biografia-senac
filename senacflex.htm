@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac flex</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap');
+        body{
+            margin: 0;
+            background-color: rgb(255, 255, 255);
+            font-family: 'Montserrat', sans-serif;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .contaneir{
+            width: 90%;
+            background-color: white;
+            margin:auto;
+        }
+        .cabecalho{
+            background-color: #2E6BAD;
+            color: white;
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        .menu{
+            display: flex;
+            justify-content:baseline;
+            background-color: #333333;
+          
+        }
+        
+        .menu a{
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+            
+        }
+       
+        .menu :hover{
+            color: rgb(2, 2, 2);
+            background-color: rgb(12, 47, 145);
+            transition: 0.2s;
+        }
+        
+        .corpo{
+            display: flex;
+            
+        }
+        .lateral{
+            width: 25%;
+            background-color: rgb(196, 193, 193);
+            padding: 20px;
+        }
+        .conteudo{
+            width: 75%;
+            margin-left: 30px;
+        }
+        .conteudo img, .lateral img{
+            max-width: 100%;
+        }
+        .conteudo img{
+           display: block;
+           margin-left: auto;
+           margin-right: auto;
+        }
+      
+        .rodape{
+            display: flex;
+            background-color: rgb(83, 82, 82);
+            color:white;
+            justify-content: center;
+        }
+        @media screen and (max-width:650px) {
+            .cabecalho{
+                flex-direction: column;
+            }
+        }
+        @media screen and (max-width:600px) {
+            .menu{
+                flex-direction: column;
+                text-align: center;
+            }
+            .corpo{
+                flex-direction: column;
+            }
+            .conteudo{
+                order: 1;
+                margin-left: 0px;
+                width: 100%;
+            }
+            .lateral{
+                order: 2;
+                width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cabecalho">
+            <h1>Senac São Paulo</h1>
+            <p>Desenvolvimento de layout com <b>flex</b> layout</p>
+        </div>
+
+        <div class="menu">
+            <a href="#">Início</a>
+            <a href="#">Loja</a>
+            <a href="#">Contato</a>
+            <a href="#">Sobre</a>
+        </div>
+        <div class="corpo">
+            <div class="lateral">
+                <h2>O Senac</h2>
+                <a href="https://www.sp.senac.br/" target="_blank"><img  src="imgn/Senac_logotransparente.png" width="250"></a>
+                    <p>O Serviço Nacional de Aprendizagem Comercial é uma instituição brasileira de educação profissional aberta a toda a sociedade.
+                        <h5>Fundador:</h5>Confederação Nacional do Comércio de Bens, Serviços e Turismo
+                        <h5>Fundação</h5> 10 de janeiro de 1946, São Paulo, São Paulo
+                    </p>
+            </div>
+            <div class="conteudo">
+                <h1> Historia</h1>
+                <p>Lucas Wallace,  February - 2032</p>
+                <img src="imgn/senaclocal.jpg" >
+                <p>Foi criado em 10 de janeiro de 1946 através do decreto-lei 8.621.[3] É uma entidade privada com fins públicos que recebe contribuição compulsória das empresas do comércio e de atividades assemelhadas. 
+                    A nível nacional é administrado pela Confederação Nacional do Comércio.
+                    Os primeiro cursos ofertados pelo SENAC foram em 1947, foi o curso de Praticante de Comércio e o curso de Praticante de Escritório, destinado a jovens entre 14 e 18 anos. 
+                    Já para maiores de 18 anos, foram disponibilizados os cursos de Balconista de Tecidos, Calçados e Ferragens, Arquivista e Caixa-Tesoureiro.[4]
+                    Sua missão é desenvolver pessoas e organizações para o mundo do trabalho com ações educacionais e disseminação de conhecimentos em Comércio de Bens, Serviços e Turismo.
+                    Ao longo de 70 anos de atividades, com presença em todos os estados do Brasil, o Senac preparou mais de 40 milhões de pessoas para o setor de Comércio e Serviços, 
+                    contribuindo para a valorização do trabalhador por meio de sua capacitação profissional em doze áreas de formação incluindo cursos de idiomas.
+                    Através de diferentes modalidades de ensino, dentre as quais destaca-se o programa Senac Móvel,
+                     a instituição se faz presente em mais de 1.850 municípios, capacitando para o mercado do trabalho cerca de 1,7 milhões de brasileiros a cada ano.
+                    <h2>Atuações</h2>
+                     A instituição atua também no ensino superior desde 1989. O Senac mantém o Centro Universitário Senac, que oferece cursos de graduação (bacharelados e de tecnologia) e de pós-graduação (aperfeiçoamento, especialização e mestrado profissional e acadêmico). 
+                    No interior de São Paulo, os dois campi do Senac ficam junto aos hotéis-escola Grande Hotel São Pedro e Grande Hotel Campos do Jordão — nestes casos atendendo à área de turismo, hotelaria e gastronomia.
+                     Na capital paulista, o Senac abriga cursos superiores de todos os segmentos com a mais moderna infraestrutura educacional, incluindo biblioteca com noventa mil itens, centro de gastronomia, 
+                     centenas de salas de aula, dezenas de laboratórios, centro poliesportivo, centro de convenções e outros ambientes.</p>
+
+            </div>
+        </div>
+        <div class="rodape">
+            <p>&copy; SENAC 2032.</p>
+           </div>
+    </div>
+</body>
+</html>
